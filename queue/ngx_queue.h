@@ -1,5 +1,5 @@
-#ifndef _NGX_QUEUE_H_INCLUDED_
-#define _NGX_QUEUE_H_INCLUDED_
+#ifndef _NGINX_TUTORIAL_QUEUE_NGX_QUEUE_H_
+#define _NGINX_TUTORIAL_QUEUE_NGX_QUEUE_H_
 
 #include <stddef.h> /* offsetof() */
 
@@ -101,4 +101,4 @@ void ngx_queue_sort(ngx_queue_t *queue,
     ngx_int_t (*cmp)(const ngx_queue_t *, const ngx_queue_t *));
 
 
-#endif /* _NGX_QUEUE_H_INCLUDED_ */
+#endif /* _NGINX_TUTORIAL_QUEUE_NGX_QUEUE_H_ */
