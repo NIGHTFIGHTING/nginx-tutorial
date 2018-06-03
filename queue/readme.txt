@@ -1,0 +1,3 @@
+nginx代理服务器
+baidu-rpc业务处理服务器
+cluncene搜索引擎服务器
