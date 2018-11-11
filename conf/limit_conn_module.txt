@@ -1,0 +1,30 @@
+Nginx的请求限制
+连接频率限制:limit_conn_module
+请求频率限制:limit_req_module
+
+Http协议版本:连接关系
+HTTP1.0:TCP不能复用
+HTTP1.1:顺序性TCP复用
+HTTP2.0:多路复用TCP复用
+
+HTTP协议的连接与请求
+HTTP请求建立在一次TCP连接基础上
+一次TCP请求至少产生一次HTTP请求
+
+连接限制
+Sytax:limit_conn_zon key zone=name:size;
+Default: -
+Context: http
+
+Sytax: limit_conn name number;
+Default: -
+Context: http,server,location
+
+请求限制:
+Sytax: limit_req_zone key zone=name:size rate=rate;
+Default: -
+Context: http
+
+Sytax: limit_req zone=name [burst=number] [nodelay];
+Default: -
+Context: http,server,location

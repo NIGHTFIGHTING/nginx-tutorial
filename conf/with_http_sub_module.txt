@@ -1,0 +1,14 @@
+编译选项:--with-http_sub_module
+作用:HTTP内容替换
+http_sub_module
+Sytax: sub_filter string replacement;
+Default: -
+Context: http,server,location
+
+Sytax: sub_filter_last_modified on:off;
+Default: sub_filter_last_modified off;
+Context: http,server,location
+
+Sytax: sub_filter_once on|off;
+Default: sub_filter_once on;
+Context: http,server,location
