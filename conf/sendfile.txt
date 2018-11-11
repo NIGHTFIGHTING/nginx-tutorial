@@ -1,0 +1,35 @@
+CDN缓存:
+Syntax: sendfile|off
+Default: sendfile off;
+Context: http,server,location, if in location
+引读: --with-file-aio异步文件读取
+
+配置语法:-tcp_nopush
+Sytax: tcp_nopush on | off;
+Default: tcp_nopush off;
+Context: http,sever,location
+作用:sendfile开启的情况下,提高网络包的传输效率
+
+配置与法:-tcp_nodelay
+Sytax: tcp_nodelay on | off;
+Default: tcp_nodelay on;
+Context: http,sever,location
+作用:keeplive开启的情况下,提高网络包的传输实时性
+
+配置语法-压缩
+Syntax: gzip on | off;
+Default: gzip off;
+Context: http,server,location,if in location
+作用:压缩传输
+
+Sytax: gzip_comp_level level;
+Default: gzip_comp_level 1;
+Context: http,server,location
+
+Sytax: gzip_http_version 1.0|1.1;
+Default: gzip_http_version 1.1;
+Context: http,server,location
+
+苦战Nginx压缩模块
+http_gzip_static_module - 预读gzip功能
+http_gunzip_module - 应用支持gnuzip的压缩方式

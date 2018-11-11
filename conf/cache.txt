@@ -1,0 +1,11 @@
+
+校验过期机制:Expires,Cache-Control(max-age)
+协议中Etag头信息校验 Etag
+Last-Modified头信息校验 Last-Modified
+
+配置语法-expires
+添加Cache-Control,Expires头
+Syntax: expires[modified] time;
+        expires epoch | max | off;
+Default: expires off;
+Context: http,server,locationl, if in location
