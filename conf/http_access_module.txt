@@ -1,0 +1,16 @@
+Nginx的访问控制
+基于IP的访问控制 - http_access_module
+基于用户的信任登陆 - http_auth_basic_module
+
+Syntax: allow address | CIDR | unix: | all;
+Default: -
+Context: http, server,location, limit_except
+
+Syntax: deny address | CIDR | unix: | all;
+Default: -
+Context: http, server,location, limit_except
+
+局限性:
+1.采用别的HTTP投信息控制访问,如:HTTP_X_FORWARD_FOR
+2.结合geo模块
+3.通过HTTP自定义变量传递
