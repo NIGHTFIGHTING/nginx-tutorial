@@ -1,0 +1,6 @@
+
+防盗链设置思路:
+首要方式:区别哪些请求是非正常的用户请求
+
+基于http_refer防盗链配置模块
+Sytax: valid_referers none | 

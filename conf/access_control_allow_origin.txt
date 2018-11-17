@@ -1,0 +1,7 @@
+
+Syntax: add_header name value [always];
+Default: -
+Context: http,server,location, if in location
+
+Access-Control-Allow-Origin
+Access-Control-Allow-Methods

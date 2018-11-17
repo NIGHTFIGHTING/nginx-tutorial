@@ -1,0 +1,34 @@
+Sytax: proxy_pass URL
+Default: -
+Contextlocation, if in location, limit_except
+
+http://localhost:8000/uri/
+https://192.168.1.1:8000/uri
+http://unix:/tmp/backend.socket/uri/;
+
+http://nginx.org/en/docs/http/ngx_http_proxy_module.html
+-缓冲区
+Sytax: proxy_buffering on|off;
+Default: proxy_buffering on;
+Context: http,server,location
+扩展:proxy_buffer_size,proxy_buffers,proxy_busy_buffers_size
+
+跳转重定向
+Sytax: proxy_redirect default;
+proxy_redirect; proxy_redirect redirect replacement
+Default: proxy_redirect default;
+Context: http,server,location
+
+头信息
+Sytax: proxy_set_header field value;
+Default: proxy_set_header Host $proxy_host;
+         proxy_set_header Connection closed;
+         proxy_set_header Connection close;
+Context:http, server, location
+扩展:proxy_hide_header, proxy_set_body
+
+超时:
+Syntax: proxy_connect_timeout time;
+Default: proxy_connect_timeout 60s;
+Context: http, server, location
+扩展:proxy_read_timeout, proxy_send_timeout
