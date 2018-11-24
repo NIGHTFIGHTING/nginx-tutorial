@@ -1,0 +1,11 @@
+http://www.imooc.com/article/19597
+1http://luajit.org/download.html
+vim ~/.bashrc
+export LUAJIT_LIB=/usr/local/LuaJIT/lib
+export LUAJIT_INC=/usr/local/LuaJIT/include/luajit-2.0
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/LuaJIT/lib
+2.https://github.com/simplresty/ngx_devel_kit
+3.https://github.com/openresty/lua-nginx-module
+
+4../configure --prefix=/usr/local/nginx --add-module=../ngx_devel_kit-0.3.0 --add-module=../lua-nginx-module
+LD_LIBRARY_PATH=/usr/local/LuaJIT/lib ./nginx -V
