@@ -1,0 +1,11 @@
+Syntax: ssl on|off;
+Default: ssl off;
+Context: http,server
+
+Sytax: sll_certificate file;
+Default: -
+Context: http,server
+
+Sytax: ssl_certificate_key file;
+Default: -
+Context: http,server

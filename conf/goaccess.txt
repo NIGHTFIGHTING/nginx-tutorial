@@ -1,0 +1,1 @@
+goaccess access.log -o ../html/report.html --real-time-html --time-format='%H:%M:%S' --date-format='%d/%b' --log-format=COMBINED

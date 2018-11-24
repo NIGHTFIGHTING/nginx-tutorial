@@ -1,0 +1,34 @@
+实现url重写和url重定向
+
+1)URL访问跳转,支持开发设计
+ 页面跳转,兼容性支持,展示效果等
+2)SEO优化
+3)维护
+ 后台维护,流量转发等
+4)安全
+
+Sytax: rewrite regex replacement [flag];
+Default: -
+Context: server,location,if
+rewrite ^(.*)$ /pages/maintain.html break;
+
+正则表达式
+() 用于匹配括号之间的内容,通过$1,$2调用
+if ($http_user_agent ~ MSIE) {
+    rewrite ^(.*)$ /msie/$1 break;
+}
+
+命令:pcretest
+flag:
+last:停止rewrite检测
+break:停止rewrite检测
+redirect:返回302临时重定向,地址栏会显示跳转后的地址
+permanent:返回301永久重定向,地址栏会显示跳转后的地址
+
+Rewrite规则优先级
+执行server块的rewrite指令
+执行location匹配
+执行选定的location中的rewrite
+
+优雅的Rewrite规则书写
+

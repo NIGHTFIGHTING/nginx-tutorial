@@ -1,0 +1,9 @@
+1.制定并允许请求的连接的真实性以及傲虎资源免遭受未经允许的访问
+2.限制连接生效周期
+Syntax: secure_link expression;
+Default:    —
+Context:    http, server, location
+
+Syntax: secure_link_md5 expression;
+Default:    —
+Context:    http, server, location

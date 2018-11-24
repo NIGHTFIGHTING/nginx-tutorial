@@ -1,0 +1,71 @@
+<html lang="en">  
+<head>  
+<meta charset="UTF-8" />  
+<title>测试ajax和跨域访问</title>  
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>  
+</head>  
+
+
+<script type="text/javascript">
+$(function () {
+// document.getElementById("ifm").src ="http://140.143.24.75:8002/test_mysite.html";//Url地址
+document.getElementById("ifm").src ="http://140.143.24.75:8000";//Url地址
+
+
+$("#ifm").load(function () {
+var h = document.body.clientHeight;
+var w = document.body.clientWidth;
+// document.getElementById("ifm").height = h + "px";
+document.getElementById("ifm").width = w + "px";
+document.getElementById("ifm").height = 200 + "px";
+// document.getElementById("ifm").width = w + "px";
+
+
+});
+})
+</script>
+
+<script type="text/javascript">  
+$(document).ready(function(){  
+    // $.ajax({  
+    //     type: "GET",  
+    //     url: "http://140.143.24.75:8000",
+    //     //url: "http:www.baidu.com",
+    //     success: function(data) {
+    //         $("get_data").html(data)
+    //         console.log("成功",data)
+    //     },
+    //     error: function(data) {  
+    //         console.log(JSON.stringify(data));
+    //         alert("fail!!!,请刷新再试!");  
+    //     }  
+    // });  
+
+    //$.get("http://www.baidu.com",function(data) {
+      //      console.log("成功",data)
+    //})
+});  
+</script>  
+<body>  
+    <h1>测试动静分离</h1>
+
+<div id="pageone" style="">
+<iframe name="ifm" id="ifm" scrolling="yes" style="background-color: transparent;" marginwidth="0" marginheight="0" frameborder="0">
+</iframe>
+</div>
+
+    <img src="http://140.143.24.75:8001/a.jpg"/>
+    <div id="get_data"><div>
+
+
+
+
+
+</body>
+
+
+<!-- 
+<body style="overflow-y:hidden;overflow-x:hidden">
+ -->
+
+</html>  

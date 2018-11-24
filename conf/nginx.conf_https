@@ -1,0 +1,17 @@
+
+http {
+server
+{
+    listen 443;
+    server_name 140.143.24.75 localhost;
+    ssl on;
+    ssl_certificate /usr/local/nginx/sbin/nginx/ssl_key/jesonc.crt;
+    ssl_certificate_key /usr/local/nginx/sbin/nginx/ssl_key/jesonc.key;
+    index index.html index.htm;
+    location / {
+        root   html;
+        index  index.html index.htm;
+    }
+
+}
+}

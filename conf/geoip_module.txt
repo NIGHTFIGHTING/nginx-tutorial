@@ -1,0 +1,2 @@
+基于IP地址匹配MaxMind GeoIP二进制文件,读取IP所在地域信息
+yum install nginx-module-geoip

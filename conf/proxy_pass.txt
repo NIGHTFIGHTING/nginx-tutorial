@@ -32,3 +32,12 @@ Syntax: proxy_connect_timeout time;
 Default: proxy_connect_timeout 60s;
 Context: http, server, location
 扩展:proxy_read_timeout, proxy_send_timeout
+
+补充-如何清理指定缓存?
+方式一.rm -rf缓存目录内容
+方式二.第三方扩展模块ngx_cache_purge
+
+如何让部分页面不缓存?
+Sytax: proxy_no_cache string ...;
+Default: -
+Context: http,server,location
