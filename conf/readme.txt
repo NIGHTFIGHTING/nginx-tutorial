@@ -1,1 +1,1 @@
-./configure --with-http_secure_link_module --with-http_sub_module --with-http_stub_status_module
+./configure --prefix=/usr/local/nginx --with-http_secure_link_module --with-http_sub_module --with-http_stub_status_module --with-http_ssl_module --add-module=../ngx_devel_kit-0.3.0 --add-module=../lua-nginx-module

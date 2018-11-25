@@ -1,0 +1,17 @@
+yum install httpd-tools
+ab -n 2000 -c 2 http://127.0.0.1/
+-n 总的请求数
+-c 并发数
+-k 是否开启长连接
+
+/etc/security/limits.conf
+nginx:worker_rlimit_nofile 65535;
+cpu数量:cat /proc/cpuinfo | grep "physical id"|sort|uniq|wc -l 
+cpu核数:cat /proc/cpuinfo | grep "cpu cores"|uniq 
+worker_processes 计算机总核数;
+worker_cpu_affinity ;
+worker_cpu_affinity auto;
+ps -eo pid,args,psr | grep [n]ginx
+
+每个进程最大连接数worker_connections 10240;
+charset utf-8;
