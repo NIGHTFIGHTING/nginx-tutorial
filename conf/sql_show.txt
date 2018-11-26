@@ -1,0 +1,15 @@
+yum install mariadb-server mariadb -y
+yum install php php-fpm php-mysql
+systemctl start mariadb
+systemctl status mariadb
+
+mysql -u root -p
+show databases;
+create database info;
+show tables;
+create table users(id int(11),username varchar(64),password varchar(64), email varchar(64));
+desc users;
+insert into users (id,username,password,email) values(1,'liuqi',md5('123'),'liuqi15@baidu.com');
+select * from users;
+
+php-fpm -D
